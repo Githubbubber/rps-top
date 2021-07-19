@@ -1,0 +1,38 @@
+Create a browser-based game of Rock Paper Scissors
+
+create user input string let variable
+    aka playerSelection
+create computer play string let variable
+    aka computerSelection
+create win string let variable
+create lose string let variable
+create win statement string let variable
+create moves array constant
+
+function playerPlay()
+    add string to prompt function
+    show prompt to user
+    wait for input from user
+    store input from user in player play variable
+        Sanitize
+        Verify
+        Lowercase
+    return player play variable
+
+function computerPlay()
+    create random int variable storing from 1 - 3
+    generate random moves array item
+    store random moves array item in computer play variable
+    return computer play variable
+
+function playRound(playerSelection, computerSelection)
+    // stuff //
+    return win statement string let variable
+
+function game()
+    store the value from playerPlay() into playerSelection
+    store the value from computerPlay() into computerSelection
+    console.log playRound(playerSelection, computerSelection)
+    repeat all of the above five times
+    tally winner after five rounds
+    console.log winner after five rounds
