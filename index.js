@@ -1,16 +1,19 @@
 'use strict';
 
 let pcTally = [0, 0];
-let gameNum = 0;
+let result;
+let gameNum = 1;
 let randNum = null;
 let winningMove = "";
 let losingMove = "";
 let playerSelection = "";
 let computerSelection = "";
 let movesArray = ["rock", "paper", "scissors"];
+let cThrow;
+let resultStatement;
 
-function playerPlay() {
-    pThrow = prompt("What is your move?");
+function playerPlay(gameNum) {
+    let pThrow = prompt(`Move #${gameNum} What is your move?`);
     pThrow = pThrow ? pThrow.toLowerCase() : null;
 
     return pThrow;
@@ -86,20 +89,22 @@ function playRound(playerSelection, computerSelection) {
 
     winningMove = winningMove[0].toUpperCase() + winningMove.slice(1);
 
-    let resultStatement = `You ${result}! ${winningMove} ${losingMove}`;
+    resultStatement = `You ${result}! ${winningMove} ${losingMove}`;
 
     return resultStatement;
 }
 
-function game() {
-    playerSelection = playerPlay();
+function game(gameNum) {
+    playerSelection = playerPlay(gameNum);
     computerSelection = computerPlay();
 
     console.log(playRound(playerSelection, computerSelection));
 }
 
-while (gameNum < 5) {
-    game();
+alert("Ok let's play. Choose rock, paper, or scissors.");
+
+while (gameNum < 6) {
+    game(gameNum);
     gameNum++;
 }
 
