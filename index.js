@@ -34,13 +34,13 @@ function playRound(playerSelection, computerSelection) {
                 result = "lose";
                 winningMove = "paper";
                 losingMove = "beats rock";
-                pcTally[1] = pcTally[1]++;
+                pcTally[1] = ++pcTally[1];
                 break;
             case "scissors":
                 result = "win";
                 winningMove = "rock";
                 losingMove = "beats scissors";
-                pcTally[0] = pcTally[0]++;
+                pcTally[0] = ++pcTally[0];
                 break;
             default:  // computerSelection = "rock"
                 result = "are tied";
@@ -53,13 +53,13 @@ function playRound(playerSelection, computerSelection) {
                 result = "lose";
                 winningMove = "scissors";
                 losingMove = "beats paper";
-                pcTally[1] = pcTally[1]++;
+                pcTally[1] = ++pcTally[1];
                 break;
             case "rock":
                 result = "win";
                 winningMove = "paper";
                 losingMove = "beats rock";
-                pcTally[0] = pcTally[0]++;
+                pcTally[0] = ++pcTally[0];
                 break;
             default: // computerSelection = "paper"
                 result = "are tied";
@@ -72,13 +72,13 @@ function playRound(playerSelection, computerSelection) {
                 result = "win";
                 winningMove = "scissors";
                 losingMove = "beats paper";
-                pcTally[0] = pcTally[0]++;
+                pcTally[0] = ++pcTally[0];
                 break;
             case "rock":
                 result = "lose";
                 winningMove = "rock";
                 losingMove = "beats scissors";
-                pcTally[1] = pcTally[1]++;
+                pcTally[1] = ++pcTally[1];
                 break;
             default: // computerSelection === "scissors"
                 result = "are tied";
@@ -108,4 +108,4 @@ while (gameNum < 6) {
     gameNum++;
 }
 
-console.log(`And the winner overall is ${pcTally[0] < pcTally[1] ? "You!" : "The computer"}`);
+console.log(`And the winner overall is ${pcTally[0] > pcTally[1] ? "You!" : "The computer"}`);
