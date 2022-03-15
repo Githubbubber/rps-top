@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 let pcTally = [0, 0];
 let result;
@@ -101,11 +101,11 @@ function game(gameNum) {
     console.log(playRound(playerSelection, computerSelection));
 }
 
-alert("Ok let's play. Choose rock, paper, or scissors.");
+// alert("Ok let's play. Choose rock, paper, or scissors.");
 
-while (gameNum < 6) {
-    game(gameNum);
-    gameNum++;
-}
+// while (gameNum < 6) {
+//     game(gameNum);
+//     gameNum++;
+// }
 
-console.log(`And the winner overall is ${pcTally[0] > pcTally[1] ? "You!" : "The computer"}`);
+// console.log(`And the winner overall is ${pcTally[0] > pcTally[1] ? "You!" : "The computer"}`);
